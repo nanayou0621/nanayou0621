@@ -8,11 +8,17 @@ body{
 /*sp-header */
 
 header{
-  background: #AA998A;
-  padding:16px;
+  background-color: rgba(170,153,138,0.8);
+  position: fixed;
+  padding: 16px;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 10;
 }
 .sp-menu{
   display: flex;
+  align-items: center;
 }
 .pc-menu{
   display: none;
@@ -24,10 +30,7 @@ header{
   font-size: 32px;
   cursor: pointer; 
 }
-.logo img{
-  width: 100px;
-  height: 100px;
-}
+
 
 .overlay{
   position: fixed;
@@ -36,7 +39,6 @@ header{
   left: 0;
   right: 0;
   text-align: center;
-  list-style-type: none;
   background: rgba(255,255,255,0.95);
   padding: 64px;
   opacity: 0;
@@ -50,7 +52,7 @@ header{
 }
 .overlay #close{
   position: absolute;
-  top: 16px;
+  top: 42px;
   right: 16px;
   font-size:32px;
   cursor: pointer;
@@ -71,6 +73,7 @@ header{
 .overlay li a{
   color: black;
   text-decoration: none;
+  font-size: 24px;
 }
 .overlay.show li {
   opacity: 1;
@@ -92,31 +95,19 @@ header{
 
 
 /* トップ画像 */
-.tab-menu{
-  margin:30px 10px 0 0;
-  font-size: 14px;
-  vertical-align: middle;
-}
-.tab-menu::before{
- content:"";
- display: inline-block;
- background-image: url(img/ホームのフリーアイコン素材.png);
- width: 20px;
- height: 20px;
- background-size: contain;
- vertical-align: sub;
- margin:0 6px ;
-}
 .carousel{
   width: 100%;
   margin: 0 auto;
 }
+.wrapper{
+  position: relative;
+}
 .container{
-  width: 100%;
-  height: 300px;
+  min-width: 100%;
+  height: 600px;
+  position: center;
   overflow: hidden;
   position: relative;
-  
 }
 
 .container ul{
@@ -138,6 +129,7 @@ header{
   height: 100%;
   object-fit:cover;
   z-index: 2; 
+  object-position: 50% 100%;
 }
 
 #prev,
@@ -148,7 +140,7 @@ header{
   border: none;
   background: rgba(0,0,0,.8);
   color: #fff;
-  font-size: 24px;
+  font-size: 36px;
   padding: 0.8px 4px;
   cursor: pointer;
 }
@@ -166,6 +158,9 @@ header{
 .button-nav{
   margin-top:16px;
   text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 180px;
 }
 .button-nav button + button {
   margin-left: 8px;
@@ -174,17 +169,20 @@ header{
   border: none;
   width: 16px;
   height: 16px;
-  background: #ddd;
+  background: #fff;
   border-radius: 50%;
   cursor: pointer;
 }
-.button-nav.current{
+.button-nav .current{
   background:#999 ;
 }
 h2{
   text-align: center;
   color: #9AC3BC;
   font-size: 40px;
+}
+.menu-container{
+  text-align: center;
 }
 .menu-container ul{
   padding: 0;
@@ -195,26 +193,15 @@ h2{
 }
 .menu-container img{
   width: 250px;
-  height: 250px;  animation-name: animation;
-  animation-duration: 2s;
+  height: 250px; 
   
 }
 
-/* @keyframes animation{
-  0%{
-    width: 50%;
-  }
-  
-  100%{
-    width: 100%;
-  }
-} */
 
-/* メイン */
-
-/* コンセプト */
+/* コンセプト 部分*/
 
 .concept-container img{
+  border-radius: 20%;
   width: 100%;
   height: 100%;
 }
@@ -224,46 +211,50 @@ h2{
 .concept-text P{
   color: #794B4B;
 }
-.menu-container #menu-1{
-  object-position: 100% 100%;
-}
-.drink-menu{
-  border-radius: 20%;
+
+.menu-container{
   padding: 16px;
 }
-.drink-menu h2{
-  padding: 0;
-  margin-top: 0;
+.menu-container img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+.menu-container h3{
+  text-align: left;
+  border-bottom: 2px solid black;
+  font-size: 20px;
+}
+.menu-container p{
+  font-size: 16px;
+  text-align: left;
+}
 
-}
-.cake-menu{
-  display: none;
-}
-.menu-list li{
-  list-style-type: none;
-  margin-bottom: 8px;
-  padding-left: 16px;
-}
-.contact-menu{
-  padding: 8px;
-  margin: 0 auto;
-}
-.contact-menu th{
-  padding: 0;
-  font-size: 12px;
-}
+/* フッター */
 footer{
+  height: 300px;
   line-height: 90px;
-  background-color: black;
+  background: rgba(0,0,0,0.5);
   color: white;
 }
+.footer-logo{
+  margin: 0 auto;
+}
+footer img{
+  text-align: center;
+}
 footer ul{
+  height: 50px;
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+footer ul li{
+  padding: 0;
 }
 .footer-list{
   margin-left: 24px;
@@ -272,6 +263,77 @@ footer ul{
 footer p{
   text-align: center;
   margin: 0;
+  padding: 0;
+}
+.footer-container{
+  display: block;
+}
+footer{
+  background: #F4F3DF;
+  text-align: center;
+  padding: 24px;
+}
+footer table{
+  margin: 0 auto;
+}
+footer table td{
+  width: 178px;
+  text-align: left;
+  padding: 16px;
+}
+footer ul{
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+footer li{
+  list-style-type: none;
+  margin-left:24px ;
+}
+.bi-instagram{
+  color: #E7973A;
+}
+.bi-twitter{
+  color: #1da1f2;
+}
+.bi-facebook{
+  color: #1877f2;
+}
+/* トップへ sp */
+.go-to-top{
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(0,0,0,.7);
+  color: #999;
+  font-size: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  z-index: 10;
+  line-height: 1.4;
+  -moz-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  right: 10px;
+}
+.go-to-top.active {
+  -webkit-transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+  z-index: 1001;
+}
+.go-to-top a{
+  text-decoration: none;
+  color: white;
+}
+.ion-md-arrow-up{
+  font-size: 18px;
+  line-height: 1.9;
+}
+.ion-md-arrow-up::before{
+  content: "↑";
 }
 @media screen and (min-width: 600px){
   .pc-menu{
@@ -299,11 +361,17 @@ footer p{
   }
   .logo img{
     width: 270px;
-    height: 100px;
   }
    /* トップ画像 */
   .container{
-    height: 500px;
+    height: 700px;
+  }
+  .top-image img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    z-index: 2; 
+    object-position: 50% 100%;
   }
 
   /* コンセプト */
@@ -311,7 +379,6 @@ footer p{
     display: flex;
   }
   .concept-text img{
-    border-radius: 20%;
     width: 100%;
     height: 100%;
   }

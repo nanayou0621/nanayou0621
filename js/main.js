@@ -82,6 +82,16 @@ close.addEventListener('click',() =>{
     moveSlides();
   });
 }
+const pagetop = document.getElementById("pagetop");
+
+// .pagetopをクリックしたら
+pagetop.addEventListener("click",()=>{
+// ページ上部へスムーズに移動
+    window.scroll({
+      top:0,
+      behavior:"smooth"
+  });
+});
     }
   
 
