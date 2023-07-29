@@ -27,7 +27,7 @@
   </div>
   <div class="sp-menu">
     <div class="sp-logo">
-    <a href="#"></a><img src="img/logo-sp.png" alt="ロゴ" width="180" height="80"></a>
+    <a href="#"></a><img src="img/logo-sp.png" alt="ロゴ"></a>
     </div>
     <div class="sp-nav">
     <span class="material-icons" id="open">
@@ -53,6 +53,7 @@
 </header>
 <body>
 <main>
+  <!-- トップ画像 -->
 <section class="carousel">
   <div class="wrapper">
   <div class="container">
@@ -78,21 +79,18 @@
    <h2>Concept</h2>
    
     <div class="concept-text">
-    <div>
     <p>上質な大人カフェをコンセプトに
-      パリの喫茶店をイメージ。
+      パリの喫茶店をイメージ。<br>
+      こだわりは、オリジナル焙煎・店内挽き
+      たて・ハンドドリップ、本来のおいしさ
+      を追求したコーヒー。<br>
       ゆったりとした落ち着いた空間で、
       香り豊かなコーヒーと自家製スイーツ
       など、日常のちょっと贅沢をお楽しみ
       ください。
-      こだわりは、オリジナル焙煎・店内挽き
-      たて・ハンドドリップ、本来のおいしさ
-      を追求したコーヒー。</p>
-    </div>
-    <div>
+     </p>
     <img src="img/cafe-concept pic.jpg" alt="カフェの内装写真">
   </div>
-</div>
 
 </section>
 
@@ -102,32 +100,36 @@
   <h2>Menu</h2>
   </div>
   <div class="menu-container">
-      <div>
-      <h3>丁寧に焙煎</h3>
-      <img src="img/menu-1.jpg" alt="コーヒー" id="menu-1">
-      <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
-      </div>  
-      <div>      
-      <h3>アートコーヒー</h3>
-      <img src="img/menu-2.jpg" alt="コーヒー" id="menu-1">
-      <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
-      </div>        
-      <div>        
+    <div class="menu-full">
+      <div class="menu-wrapper">       
+        <div class="menu-page">        
+        <h3>丁寧に焙煎</h3>
+        <img src="img/menu-1.jpg" alt="コーヒー" id="menu-1">
+        <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
+        </div>        
+        <div class="menu-page">       
+        <h3>アートコーヒー</h3>
+        <img src="img/menu-2.jpg" alt="コーヒー" id="menu-1">
+        <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
+       </div>
+     
+        </div>
+     <div class="menu-wrapper">       
+      <div class="menu-page">       
       <h3>手作り</h3>
       <img src="img/cake1.jpg" alt="ケーキ" id="menu-1">
       <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
       </div>        
-      <div>        
+      <div class="menu-page">        
       <h3>アートコーヒー</h3>
       <img src="img/cake2.jpg" alt="ケーキ" id="menu-1">
       <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
-      </div>        
+      </div>
+     </div>        
     </div>
-  </section>
- 
-  <section class="menu-list">
+   <div class="menu-list">
     <div class="drink-menu">
-      <h2>Drink Menu</h2>
+      <h3>Drink Menu</h3>
       <table>
         <tr>
           <td>コーヒー[HOT/ICE]</td>
@@ -150,10 +152,9 @@
           <td>500yen</td>
         </tr>
       </table>       
-        <p>その他の飲み物もございます</p>
-    </div>
-    <div class="cake-menu">
-      <h2>Cake Menu</h2>
+     </div>
+     <div class="cake-menu">
+      <h3>Cake Menu</h3>
       <table>
         <tr>
           <td>チョコレートケーキ</td>
@@ -176,9 +177,10 @@
           <td>500yen</td>
         </tr>
       </table>
-    </div>
-  </section>
-  <section>
+     </div>
+  </div>
+</section>
+
   
 </main>
 
@@ -187,7 +189,7 @@
   <footer>
     <section class="footer-container">
     <div class="footer-logo">
-    <img src="https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/749274/4306/4e3d3f2421ff1ae2e051612532b5320cffb1244e.png" width="250">
+    <img src="" width="250">
     </div>
      <div>
     <table>
@@ -219,7 +221,7 @@
      </footer>
   <!-- トップへ -->
   <div class="go-to-top active" id="pagetop">
-  <i class="icon ion-md-arrow-up"></i>
+    <i class="bi bi-arrow-up"></i>
   </div>
   <script src="js/main.js"></script>
 </body>
