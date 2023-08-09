@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="style.css">
  
 </head>
-<header>
+<body>
+  <header>
   <div class="pc-menu">
     <div class="logo">
       <a href="#"><img src="img/logo-pc.png" alt="ロゴ"></a>
@@ -24,7 +25,6 @@
     </ul>
   </nav>
    </div>
-  </div>
   <div class="sp-menu">
     <div class="sp-logo">
     <a href="#"><img src="img/logo-sp.png" alt="ロゴ"></a>
@@ -51,10 +51,9 @@
 </nav>
 </div>
 </header>
-<body>
-<main>
+
   <!-- トップ画像 -->
-<section class="carousel">
+<div class="carousel">
   <div class="wrapper">
   <div class="container">
     <ul class="top-image">
@@ -74,7 +73,7 @@
 
 </nav>
 </div>
-</section>
+</div>
 <section class="concept-container">
    <h2>Concept</h2>
    
@@ -89,7 +88,7 @@
       など、日常のちょっと贅沢をお楽しみ
       ください。
      </p>
-    <img src="img/cafe-concept pic.jpg" alt="カフェの内装写真">
+    <img src="img/cafe-concept_pic.jpg" alt="カフェの内装写真">
   </div>
 
 </section>
@@ -104,12 +103,12 @@
       <div class="menu-wrapper">       
         <div class="menu-page">        
         <h3>丁寧に焙煎</h3>
-        <img src="img/menu-1.jpg" alt="コーヒー" id="menu-1">
+        <img src="img/menu-1.jpg" alt="コーヒー" class="menu-1">
         <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
         </div>        
         <div class="menu-page">       
         <h3>アートコーヒー</h3>
-        <img src="img/menu-2.jpg" alt="コーヒー" id="menu-1">
+        <img src="img/menu-2.jpg" alt="コーヒー" class="menu-1">
         <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
        </div>
      
@@ -117,19 +116,19 @@
      <div class="menu-wrapper">       
       <div class="menu-page">       
       <h3>手作り</h3>
-      <img src="img/cake1.jpg" alt="ケーキ" id="menu-1">
+      <img src="img/cake1.jpg" alt="ケーキ" class="menu-1">
       <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
       </div>        
       <div class="menu-page">        
       <h3>アートコーヒー</h3>
-      <img src="img/cake2.jpg" alt="ケーキ" id="menu-1">
+      <img src="img/cake2.jpg" alt="ケーキ" class="menu-1">
       <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
       </div>
      </div>        
     </div>
    <div class="menu-list">
     <div class="drink-menu">
-      <h3>Drink Menu  [HOT/ICE]</h3>
+      <h3>Drink Menu <br> [HOT/ICE]</h3>
       <table>
         <tr>
           <td>コーヒー</td>
@@ -137,7 +136,7 @@
         </tr>
         <tr>
           <td>カフェオレ</td>
-          <td>500yen</td>
+          <td>550yen</td>
         </tr>
         <tr>
           <td>紅茶</td>
@@ -145,11 +144,11 @@
         </tr>
         <tr>
          <td>ロイヤルミルクティー</td>
-         <td>500yen</td>
+         <td>650yen</td>
         </tr>
         <tr>
           <td>エスプレッソ</td>
-          <td>500yen</td>
+          <td>700yen</td>
         </tr>
       </table>       
      </div>
@@ -162,11 +161,11 @@
         </tr>
         <tr>
           <td>チーズケーキ</td>
-          <td>500yen</td>
+          <td>400yen</td>
         </tr>
         <tr>
           <td>モンブラン</td>
-          <td>500yen</td>
+          <td>600yen</td>
         </tr>
         <tr>
          <td>ショートケーキ</td>
@@ -174,21 +173,22 @@
         </tr>
         <tr>
           <td>ロールケーキ</td>
-          <td>500yen</td>
+          <td>600yen</td>
         </tr>
       </table>
      </div>
   </div>
+ </div>
 </section>
 
-  
-</main>
 
 
 <footer>
+    <div class="footer-container">
     <div class="footer-logo">
-    <img src="img/logo footer.png" width="120" height="120">
+    <img src="img/logo_footer.png" width="120" height="120" alt="ロゴ">
     </div>
+    <div>
     <table>
     <tr>
       <td>住所</td>
@@ -207,6 +207,8 @@
       <td>火曜日、水曜日</td>
     </tr>
     </table>
+  </div>
+  </div>
     <ul>
     <li><a href="#" target="_blank"><i class="bi bi-instagram"></i></a></li>
     <li><a href="#" target="_blank"><i class="bi bi-twitter"></i></a></li>
