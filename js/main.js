@@ -13,6 +13,18 @@ close.addEventListener('click',() =>{
   open.classList.remove('hide');
 });
 
+//------ ページトップへ------
+const pagetop = document.getElementById("pagetop");
+
+// .pagetopをクリックしたら
+pagetop.addEventListener("click",()=>{
+// ページ上部へスムーズに移動
+    window.scroll({
+      top:0,
+      behavior:"smooth"
+  });
+});
+// スライドショー
 {
   const next = document.getElementById('next');
   const prev = document.getElementById('prev');
@@ -82,16 +94,7 @@ close.addEventListener('click',() =>{
     moveSlides();
   });
 }
-const pagetop = document.getElementById("pagetop");
 
-// .pagetopをクリックしたら
-pagetop.addEventListener("click",()=>{
-// ページ上部へスムーズに移動
-    window.scroll({
-      top:0,
-      behavior:"smooth"
-  });
-});
     }
   
 
