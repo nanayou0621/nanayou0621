@@ -358,7 +358,7 @@ footer p{
   height: 600px;
   min-width: 100%;
   opacity: .5;
-  background-image: "img/cake4.jpg";
+  background-image: url(../mySite/img/cake4.jpg);
   background-position: center;
   background-size: cover;  
 }
@@ -383,16 +383,24 @@ footer p{
   height: 600px;
   min-width: 100%;
   opacity: .7;
-  background-image: "img/access1.jpg";
+  background-image: url(../mySite/img/access1.jpg);
   background-position: center;
   background-size: cover; 
+}
+.access_map{
+  padding: 16px;
+}
+iframe{
+  margin: 16px auto; 
+  min-width: 100%;
+  height: 300px;
 }
 /*-contact.htmlページ--------*/
 .contact_page-container{
   height: 600px;
   min-width: 100%;
   opacity: .7;
-  background-image: "img/contact1.jpg";
+  background-image: url(../mySite/img/contact1.jpg);
   background-position: center;
   background-size: cover;
   position: relative; 
@@ -420,13 +428,13 @@ footer p{
   margin: 0 auto;  
 }
 .contact-container input#name{
-  width: 200px;
+  width: 150px;
 }
 .contact-container input#email{
-  width: 200px;
+  width: 150px;
 }
 .contact-container textarea#text{
-  width: 300px;
+  width: 150px;
   height: 100px;
 }
 
@@ -522,5 +530,26 @@ footer table{
   font-size: 18px;
 }
 
+/* contact.htmlページ */
+.contact-container table{
+  width: 600px;
+  margin: 0 auto;  
+}
+.contact-container input#name{
+  width: 200px;
+}
+.contact-container input#email{
+  width: 300px;
+}
+.contact-container textarea#text{
+  width: 300px;
+  height: 100px;
+}
+.contact-container td#submit{
+  text-align: center;
+}
+.contact-container td#submit input{
+  width: 50px;
+}
 
 }
