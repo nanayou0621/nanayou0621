@@ -54,130 +54,54 @@
 <body>
 <main>
   <!-- トップ画像 -->
-<section class="carousel">
-  <div class="wrapper">
-  <div class="container">
-    <ul class="top-image">
-      <li><img src="img/cafe-top5.jpg" alt="トップ画像" ></li>
-      <li><img src="img/cafe-top2.jpg" alt="トップ画像" ></li>
-      <li><img src="img/cafe-top3.jpg" alt="トップ画像" ></li>
-      <li><img src="img/cafe-top4.jpg" alt="トップ画像" ></li>
-      <li><img src="img/cafe-top1.jpg" alt="トップ画像" ></li>
-    </ul>
-  
+  <div class="contact_page-container">
+    <h1>Contact Page</h1>
 
-
-<button id="prev">&laquo;</button>
-<button id="next">&raquo;</button>
-</div>
-<nav class="button-nav">
-
-</nav>
-</div>
-</section>
-<section class="concept-container">
-   <h2>Concept</h2>
-   
-    <div class="concept-text">
-    <p>上質な大人カフェをコンセプトに
-      パリの喫茶店をイメージ。<br>
-      こだわりは、オリジナル焙煎・店内挽き
-      たて・ハンドドリップ、本来のおいしさ
-      を追求したコーヒー。<br>
-      ゆったりとした落ち着いた空間で、
-      香り豊かなコーヒーと自家製スイーツ
-      など、日常のちょっと贅沢をお楽しみ
-      ください。
-     </p>
-    <img src="img/cafe-concept pic.jpg" alt="カフェの内装写真">
   </div>
+
+
+<section class="contact-wrapper">
+   <h2>Contact</h2>
+ </div>
 
 </section>
 
 <!-- メニュー説明 -->
 <section>
-  <div>
-  <h2>Menu</h2>
-  </div>
-  <div class="menu-container">
-    <div class="menu-full">
-      <div class="menu-wrapper">       
-        <div class="menu-page">        
-        <h3>丁寧に焙煎</h3>
-        <img src="img/menu-1.jpg" alt="コーヒー" id="menu-1">
-        <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
-        </div>        
-        <div class="menu-page">       
-        <h3>アートコーヒー</h3>
-        <img src="img/menu-2.jpg" alt="コーヒー" id="menu-1">
-        <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
-       </div>
-     
-        </div>
-     <div class="menu-wrapper">       
-      <div class="menu-page">       
-      <h3>手作り</h3>
-      <img src="img/cake1.jpg" alt="ケーキ" id="menu-1">
-      <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
-      </div>        
-      <div class="menu-page">        
-      <h3>アートコーヒー</h3>
-      <img src="img/cake2.jpg" alt="ケーキ" id="menu-1">
-      <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
-      </div>
-     </div>        
-    </div>
-   <div class="menu-list">
-    <div class="drink-menu">
-      <h3>Drink Menu</h3>
-      <table>
-        <tr>
-          <td>コーヒー[HOT/ICE]</td>
-          <td>500yen</td>
-        </tr>
-        <tr>
-          <td>カフェオレ[HOT/ICE]</td>
-          <td>500yen</td>
-        </tr>
-        <tr>
-          <td>紅茶[HOT/ICE]</td>
-          <td>500yen</td>
-        </tr>
-        <tr>
-         <td>ロイヤルミルクティー[HOT/ICE]</td>
-         <td>500yen</td>
-        </tr>
-        <tr>
-          <td>エスプレッソ[HOT/ICE]</td>
-          <td>500yen</td>
-        </tr>
-      </table>       
-     </div>
-     <div class="cake-menu">
-      <h3>Cake Menu</h3>
-      <table>
-        <tr>
-          <td>チョコレートケーキ</td>
-          <td>500yen</td>
-        </tr>
-        <tr>
-          <td>チーズケーキ</td>
-          <td>500yen</td>
-        </tr>
-        <tr>
-          <td>モンブラン</td>
-          <td>500yen</td>
-        </tr>
-        <tr>
-         <td>ショートケーキ</td>
-         <td>500yen</td>
-        </tr>
-        <tr>
-          <td>ロールケーキ</td>
-          <td>500yen</td>
-        </tr>
-      </table>
-     </div>
+  <div class="contact-container">
+    <form action="sample.php" method="post">
+  <table cellspacing="0" cellpadding="10" border="1">
+    <tr>
+      <th>Full Name</th>
+      <td>  
+        <input type="text" name="name" required id="name">
+      </td>
+    </tr>
+    <tr>
+      <th>E-mail</th>
+      <td><input type="text" name="email" required id="email"></td>
+    </tr>
+    <tr>
+      <th>Category</th>
+      <td>
+        <label><input type="checkbox" name="category" value="1">小売販売</label>
+        <label><input type="checkbox" name="category" value="2">ネット販売</label>
+        <label><input type="checkbox" name="category" value="3">取材・メディア掲載</label>
+      </td>
+    </tr>
+    <tr>
+      <th>Message</th>
+      <td>
+        <textarea name="contents" id="text"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="submit" name="submit1" value="送信">
+      </td>
+    </tr>
+  </table>
+  </form>
   </div>
 </section>
 
@@ -186,32 +110,38 @@
 
 
 <footer>
-    <img src="img/logo footer.png" width="120" height="120">
-    <table>
-    <tr>
-      <td>住所</td>
-      <td>東京都板橋区</td>
-    </tr>
-    <tr>
-      <td>電話番号</td>
-      <td>080-xxxx-xxxx</td>
-    </tr>
-    <tr>
-      <td>営業時間</td>
-      <td>9：00～18：00</td>
-    </tr>
-    <tr>
-      <td>定休日</td>
-      <td>火曜日、水曜日</td>
-    </tr>
-    </table>
-    <ul>
-    <li><a href="#" target="_blank"><i class="bi bi-instagram"></i></a></li>
-    <li><a href="#" target="_blank"><i class="bi bi-twitter"></i></a></li>
-    <li><a href="#" target="_blank"><i class="bi bi-facebook"></i></a></li>
-    </ul>
-    <p>©️ Macalon Cafe all rights reserved.</p>
-     </footer>
+  <div class="footer-container">
+  <div class="footer-logo">
+  <img src="img/logo_footer.png" width="120" height="120" alt="ロゴ">
+  </div>
+  <div>
+  <table>
+  <tr>
+    <td>住所</td>
+    <td>東京都板橋区</td>
+  </tr>
+  <tr>
+    <td>電話番号</td>
+    <td>080-xxxx-xxxx</td>
+  </tr>
+  <tr>
+    <td>営業時間</td>
+    <td>9：00～18：00</td>
+  </tr>
+  <tr>
+    <td>定休日</td>
+    <td>火曜日、水曜日</td>
+  </tr>
+  </table>
+</div>
+</div>
+  <ul>
+  <li><a href="#" target="_blank"><i class="bi bi-instagram"></i></a></li>
+  <li><a href="#" target="_blank"><i class="bi bi-twitter"></i></a></li>
+  <li><a href="#" target="_blank"><i class="bi bi-facebook"></i></a></li>
+  </ul>
+  <p>Copyright &copy; Macalon Cafe all rights reserved.</p>
+   </footer>
   <!-- トップへ -->
   <div class="go-to-top active" id="pagetop">
     <i class="bi bi-arrow-up"></i>

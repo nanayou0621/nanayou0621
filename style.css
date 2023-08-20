@@ -46,12 +46,13 @@ header{
   left: 0;
   right: 0;
   text-align: center;
-  background: rgba(255,255,255,0.95);
+  background: rgba(170,153,138,0.95);
   padding: 64px;
   opacity: 0;
   pointer-events: none;
   transition:opacity .8s;
   z-index: 1;
+  
 }
 .overlay.show {
   opacity: 1;
@@ -78,7 +79,7 @@ header{
 
   
 .overlay li a{
-  color: black;
+  color: #EADFCA;
   text-decoration: none;
   font-size: 24px;
 }
@@ -177,7 +178,7 @@ header{
   background:#999 ;
 }
 
-/* メニュー説明*/
+/* concept */
 .concept-container{
   background: #F4F3DF;
 }
@@ -231,6 +232,12 @@ header{
   border-bottom: 2px solid black;
   font-size: 18px;
 }
+.drink-menu h3,.cake-menu h3{
+  font-family: 'M PLUS Rounded 1c Light';
+  text-align: left;
+  border-bottom: 2px solid black;
+  font-size: 18px;
+}
 .drink-menu h3::after{
   content: "  [hot/cold]";
   font-size: 12px;
@@ -242,6 +249,10 @@ header{
 .menu-container p{
   font-size: 16px;
   text-align: left;
+}
+.menu-list table th{
+  text-align: left;
+  font-size: 16px;
 }
 .menu-list table td{
   text-align: center;
@@ -276,6 +287,7 @@ footer{
 }
 footer table{
   margin: 0 auto;
+  font-size: 14px;
 }
 footer table tr{
   line-height: 50px;
@@ -342,19 +354,55 @@ footer p{
 }
 
 /* menu.htmlページ */
-.menu_page-container img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.7;
-}
-
-/*--------- コンタクトページ --------*/
-.contact-container img{
-  min-width: 100%;
+.menu_page-container{
   height: 600px;
-  overflow: hidden;
-  position: relative;
+  min-width: 100%;
+  opacity: .5;
+  background-image: url(../mySite/img/cake4.jpg);
+  background-position: center;
+  background-size: cover;  
+}
+.menu_page-container h1{
+  position: absolute;
+  top:300px;
+  left: 30px;
+  color: #000;
+  font-size: 50px;
+}
+.menu-concept-container h2{
+  width: 160px;
+  margin: 0 auto;
+  color: #9AC3BC;
+  text-align: center;
+  font-size: 40px;
+  padding-top: 40px;
+  border-bottom: 1px solid #9AC3BC;
+}
+/* Access.htmlページ */
+.access_page-container{
+  height: 600px;
+  min-width: 100%;
+  opacity: .7;
+  background-image: url(../mySite/img/access1.jpg);
+  background-position: center;
+  background-size: cover; 
+}
+/*-contact.htmlページ--------*/
+.contact_page-container{
+  height: 600px;
+  min-width: 100%;
+  opacity: .7;
+  background-image: url(../mySite/img/contact1.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative; 
+}
+.contact_page-container h1{
+  position: absolute;
+  top:300px;
+  left: 30px;
+  color: #EADFCA;
+  font-size: 50px;
 }
 .contact-wrapper h2{
   width: 160px;
@@ -365,6 +413,24 @@ footer p{
   padding-top: 50px;
   border-bottom: 1px solid #9AC3BC;
 }
+.contact-container{
+  margin: 20px;
+}
+.contact-container table{
+  margin: 0 auto;  
+}
+.contact-container input#name{
+  width: 200px;
+}
+.contact-container input#email{
+  width: 200px;
+}
+.contact-container textarea#text{
+  width: 300px;
+  height: 100px;
+}
+
+/******************************* パソコンページ *******************************/
 @media screen and (min-width: 750px){
   .pc-menu{
     display: flex;
@@ -403,6 +469,10 @@ footer p{
   
   /* コンセプト */
   .concept-text{
+    width: 800px;
+    margin: 0 auto;
+  }
+  .concept-text{
     display: flex;
     justify-content: space-evenly;
   }
@@ -412,7 +482,10 @@ footer p{
   .concept-text p{
     width: 360px;    
   }
-  
+  .menu-container{
+    width: 800px;
+    margin: 0 auto;
+  }
   .menu-wrapper{
     display: flex;
     justify-content: space-between;
@@ -443,7 +516,11 @@ footer p{
   width: 400px;
   
 }
-
+/* フッター */
+footer table{
+  margin: 0 auto;
+  font-size: 18px;
+}
 
 
 }

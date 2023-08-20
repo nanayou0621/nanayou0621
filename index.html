@@ -12,11 +12,37 @@
 </head>
 <body>
   <header>
-  <div class="pc-menu">
-    <div class="logo">
-      <a href="#"><img src="img/logo-pc.png" alt="ロゴ"></a>
+    <div class="pc-menu">
+      <div class="logo">
+        <a href="#"><img src="img/logo-pc.png" alt="ロゴ"></a>
+      </div>
+      <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="access.html">Access</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+     </div>
     </div>
-    <nav>
+    <div class="sp-menu">
+      <div class="sp-logo">
+      <a href="#"><img src="img/logo-sp.png" alt="ロゴ"></a>
+      </div>
+      <div class="sp-nav">
+      <span class="material-icons" id="open">
+        <i class="bi bi-list"></i>
+      </span>
+      </div>
+    </div>
+    
+    
+    <div class="overlay">
+      <span class="material-icons" id="close">
+        <i class="bi bi-x-square-fill"></i>
+      </span>
+      <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="menu.html">Menu</a></li>
@@ -24,33 +50,8 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-   </div>
-  <div class="sp-menu">
-    <div class="sp-logo">
-    <a href="#"><img src="img/logo-sp.png" alt="ロゴ"></a>
-    </div>
-    <div class="sp-nav">
-    <span class="material-icons" id="open">
-      <i class="bi bi-list"></i>
-    </span>
-    </div>
   </div>
-  
-  
-  <div class="overlay">
-    <span class="material-icons" id="close">
-      <i class="bi bi-x-square-fill"></i>
-    </span>
-    <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="menu.html">Menu</a></li>
-    <li><a href="access.html">Access</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-</div>
-</header>
+  </header>
 
   <!-- トップ画像 -->
 <div class="carousel">
@@ -74,6 +75,7 @@
 </nav>
 </div>
 </div>
+<!-- コンセプト -->
 <section class="concept-container">
    <h2>Concept</h2>
    
@@ -94,8 +96,8 @@
 </section>
 
 <!-- メニュー説明 -->
-<section class="menu">
-  <div>
+<section>
+  <div class="menu-concept-container">
   <h2>Menu</h2>
   </div>
   <div class="menu-container">
@@ -103,12 +105,12 @@
       <div class="menu-wrapper">       
         <div class="menu-page">        
         <h3>丁寧に焙煎</h3>
-        <img src="img/menu-1.jpg" alt="コーヒー" class="menu-1">
+        <img src="img/menu-1.jpg" alt="コーヒー" id="menu-1">
         <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
         </div>        
         <div class="menu-page">       
         <h3>アートコーヒー</h3>
-        <img src="img/menu-2.jpg" alt="コーヒー" class="menu-1">
+        <img src="img/menu-2.jpg" alt="コーヒー" id="menu-1">
         <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
        </div>
      
@@ -116,12 +118,12 @@
      <div class="menu-wrapper">       
       <div class="menu-page">       
       <h3>手作り</h3>
-      <img src="img/cake3.jpg" alt="ケーキ" class="menu-1">
-      <p>ふんだんなフルーツとホイップクリームを使って作った手作りケーキです。他にはないおいしさですので、ぜひご賞味ください。</p>
+      <img src="img/cake1.jpg" alt="ケーキ" id="menu-1">
+      <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
       </div>        
       <div class="menu-page">        
       <h3>アートコーヒー</h3>
-      <img src="img/cake2.jpg" alt="ケーキ" class="menu-1">
+      <img src="img/cake2.jpg" alt="ケーキ" id="menu-1">
       <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
       </div>
      </div>        
@@ -131,24 +133,24 @@
       <h3>Drink Menu</h3>
       <table>
         <tr>
-          <td>コーヒー</td>
+          <th>コーヒー</th>
           <td>500yen</td>
         </tr>
         <tr>
-          <td>カフェオレ</td>
-          <td>550yen</td>
-        </tr>
-        <tr>
-          <td>紅茶</td>
+          <th>カフェオレ</th>
           <td>500yen</td>
         </tr>
         <tr>
-         <td>ロイヤルミルクティー</td>
-         <td>650yen</td>
+          <th>紅茶</th>
+          <td>500yen</td>
         </tr>
         <tr>
-          <td>エスプレッソ</td>
-          <td>700yen</td>
+         <th>ロイヤルミルクティ</th>
+         <td>500yen</td>
+        </tr>
+        <tr>
+          <th>エスプレッソ</th>
+          <td>500yen</td>
         </tr>
       </table>       
      </div>
@@ -156,29 +158,28 @@
       <h3>Cake Menu</h3>
       <table>
         <tr>
-          <td>チョコレートケーキ</td>
+          <th>チョコレートケーキ</th>
           <td>500yen</td>
         </tr>
         <tr>
-          <td>チーズケーキ</td>
-          <td>400yen</td>
+          <th>チーズケーキ</th>
+          <td>500yen</td>
         </tr>
         <tr>
-          <td>モンブラン</td>
-          <td>600yen</td>
+          <th>モンブラン</th>
+          <td>500yen</td>
         </tr>
         <tr>
-         <td>ショートケーキ</td>
+         <th>ショートケーキ</th>
          <td>500yen</td>
         </tr>
         <tr>
-          <td>ロールケーキ</td>
-          <td>600yen</td>
+          <th>ロールケーキ</th>
+          <td>500yen</td>
         </tr>
       </table>
      </div>
   </div>
- </div>
 </section>
 
 
