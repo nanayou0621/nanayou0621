@@ -1,226 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marion Cafe co.,ltd</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Lugrasimo">
-  <link rel="icon" type="image/png" href="img/favicon.ico" >
-  <link rel="stylesheet" href="style.css">
- 
+  <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>MacaronCafe</title>
 </head>
 <body>
+  <!-- ローディング画面 -->
+  <div id="loading">
+    <p>Loading...</p>
+    <div id="loading-screen"></div>
+  </div>
   <header>
-    <div class="pc-menu">
-      <div class="logo">
-        <a href="#"><img src="img/logo-pc.png" alt="ロゴ"></a>
+    <!-- ハンバーガーメニュー -->
+    <div class="sp-menu">
+    <section class="header_menu">
+      <div id="logo">
+      <img src="img/Group 4logo.png" alt="ロゴ" width="200" height="70">
       </div>
-      <nav>
+      <span class="material-icon" id="open">
+        <i class="bi bi-text-left"></i>
+      </span>
+    </section>
+    <div class="overlay">
+      <span class="material-icon" id="close">
+        <i class="bi bi-x-circle-fill"></i>
+      </span>
+    <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="access.html">Access</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">MENU</a></li>
+        <li><a href="#">ACCESS</a></li>
+        <li><a href="#">CONTACT</a></li>
       </ul>
     </nav>
-     </div>
     </div>
-    <div class="sp-menu">
-      <div class="sp-logo">
-      <a href="#"><img src="img/logo-sp.png" alt="ロゴ"></a>
+  </div>
+    <div class="pc-menu">
+    <section class="header_menu">
+      <div id="logo">
+      <img src="img/Group 4logo.png" alt="ロゴ" width="200" height="70">
       </div>
-      <div class="sp-nav">
-      <span class="material-icons" id="open">
-        <i class="bi bi-list"></i>
-      </span>
-      </div>
-    </div>
-    
-    
-    <div class="overlay">
-      <span class="material-icons" id="close">
-        <i class="bi bi-x-square-fill"></i>
-      </span>
-      <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="access.html">Access</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <nav>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li class="has-menu">
+            <a href="#">MENU</a>
+            <ul class="sub-menu">
+              <li><a href="#">DRINK</a></li>
+              <li><a href="#">FOODS</a></li>
+              <li><a href="#">DESERTS</a></li>
+            </ul>
+          </li>  
+        <li><a href="#">ACCESS</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+    </section>
   </div>
   </header>
 
-  <!-- トップ画像 -->
-<div class="carousel">
-  <div class="wrapper">
-  <div class="container">
-    <ul class="top-image">
-      <li><img src="img/cafe-top5.jpg" alt="トップ画像" ></li>
-      <li><img src="img/cafe-top2.jpg" alt="トップ画像" ></li>
-      <li><img src="img/cafe-top3.jpg" alt="トップ画像" ></li>
-      <li><img src="img/cafe-top4.jpg" alt="トップ画像" ></li>
-      <li><img src="img/cafe-top1.jpg" alt="トップ画像" ></li>
-    </ul>
-  
-
-
-<button id="prev">&laquo;</button>
-<button id="next">&raquo;</button>
-</div>
-<nav class="button-nav">
-
-</nav>
-</div>
-</div>
+  <!-- ヒーロー部分 -->
+  <main>
+    <section class="main-container">
+      <div class="slider">
+      <div><img src="img/cake_pc2.jpg" alt="トップ画像"></div>
+      <div><img src="img/cake_pc3.jpg" alt="トップ画像"></div>
+      <div><img src="img/cake_pc6.jpg" alt="トップ画像"></div>
+      <div><img src="img/shop_pc.jpg" alt="トップ画像" ></div>
+     </div>
+    </section>
 <!-- コンセプト -->
-<section class="concept-container">
-   <h2>Concept</h2>
-   
-    <div class="concept-text">
-    <p>上質な大人カフェをコンセプトに
-      パリの喫茶店をイメージ。<br>
-      こだわりは、オリジナル焙煎・店内挽き
-      たて・ハンドドリップ、本来のおいしさ
-      を追求したコーヒー。<br>
-      ゆったりとした落ち着いた空間で、
-      香り豊かなコーヒーと自家製スイーツ
-      など、日常のちょっと贅沢をお楽しみ
-      ください。
-     </p>
-    <img src="img/cafe-concept_pic.jpg" alt="カフェの内装写真">
-  </div>
-
-</section>
-
-<!-- メニュー説明 -->
-<section>
-  <div class="menu-concept-container">
-  <h2>Menu</h2>
-  </div>
-  <div class="menu-container">
-    <div class="menu-full">
-      <div class="menu-wrapper">       
-        <div class="menu-page">        
-        <h3>丁寧に焙煎</h3>
-        <img src="img/menu-1.jpg" alt="コーヒー" id="menu-1">
-        <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
-        </div>        
-        <div class="menu-page">       
-        <h3>アートコーヒー</h3>
-        <img src="img/menu-2.jpg" alt="コーヒー" id="menu-1">
-        <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
-       </div>
-     
-        </div>
-     <div class="menu-wrapper">       
-      <div class="menu-page">       
-      <h3>手作り</h3>
-      <img src="img/cake1.jpg" alt="ケーキ" id="menu-1">
-      <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
-      </div>        
-      <div class="menu-page">        
-      <h3>アートコーヒー</h3>
-      <img src="img/cake2.jpg" alt="ケーキ" id="menu-1">
-      <p>芳醇な香りと心地良いコクのネルドリップコーヒー。こだわりの豆で丁寧に焙煎したコーヒをお出しいております。一度お楽しみください。</p>
+  <section class="concept-container">
+      <h2>CONCEPT</h2>
+    <div class="concept-wrapper">
+      <div class="concept-menu left">
+        <h3 class="text">マカロンで癒される</h3>
+        <img src="img/maccarons.jpg" alt="ケーキの写真">
       </div>
-     </div>        
+      <div class="concept-menu middle">
+        <h3>一息つきたいときに</h3>
+        <img src="img/coffee.jpg" alt="ケーキの写真">
+      </div>
+      <div class="concept-menu right">
+        <h3>懐かしい喫茶店の味わい</h3>
+        <img src="img/pasta.jpg" alt="ケーキの写真">
+      </div>
     </div>
-   <div class="menu-list">
-    <div class="drink-menu">
-      <h3>Drink Menu</h3>
-      <table>
-        <tr>
-          <th>コーヒー</th>
-          <td>500yen</td>
-        </tr>
-        <tr>
-          <th>カフェオレ</th>
-          <td>500yen</td>
-        </tr>
-        <tr>
-          <th>紅茶</th>
-          <td>500yen</td>
-        </tr>
-        <tr>
-         <th>ロイヤルミルクティ</th>
-         <td>500yen</td>
-        </tr>
-        <tr>
-          <th>エスプレッソ</th>
-          <td>500yen</td>
-        </tr>
-      </table>       
+    </section>
+    <!-- メニュー -->
+    <section class="menu-container">
+    <h2>MENU</h2>
+    </section>
+
+    <!-- バナー -->
+    <h2>GOODS</h2>
+    <section>
+      <div id="liner">
+      <ul>
+      <li><img src="img/バナーフルールサンド.png" alt="バナー"></li>
+      <li><img src="img/バナーフルールサンド.png" alt="バナー"></li>
+      <li><img src="img/バナーフルールサンド.png" alt="バナー"></li>
+      <li><img src="img/バナーフルールサンド.png" alt="バナー"></li>
+      </ul>
+      <ul>
+      <li><img src="img/バナーフルールサンド.png" alt="バナー"></li>
+      <li><img src="img/バナーフルールサンド.png" alt="バナー"></li>
+      <li><img src="img/バナーフルールサンド.png" alt="バナー"></li>
+      <li><img src="img/バナーフルールサンド.png" alt="バナー"></li>
+      </ul>
      </div>
-     <div class="cake-menu">
-      <h3>Cake Menu</h3>
-      <table>
-        <tr>
-          <th>チョコレートケーキ</th>
-          <td>500yen</td>
-        </tr>
-        <tr>
-          <th>チーズケーキ</th>
-          <td>500yen</td>
-        </tr>
-        <tr>
-          <th>モンブラン</th>
-          <td>500yen</td>
-        </tr>
-        <tr>
-         <th>ショートケーキ</th>
-         <td>500yen</td>
-        </tr>
-        <tr>
-          <th>ロールケーキ</th>
-          <td>500yen</td>
-        </tr>
-      </table>
-     </div>
-  </div>
-</section>
-
-
-
-<footer>
-    <div class="footer-container">
-    <div class="footer-logo">
-    <img src="img/logo_footer.png" width="120" height="120" alt="ロゴ">
-    </div>
-    <div>
-    <table>
-    <tr>
-      <td>住所</td>
-      <td>東京都板橋区</td>
-    </tr>
-    <tr>
-      <td>電話番号</td>
-      <td>080-xxxx-xxxx</td>
-    </tr>
-    <tr>
-      <td>営業時間</td>
-      <td>9：00～18：00</td>
-    </tr>
-    <tr>
-      <td>定休日</td>
-      <td>火曜日、水曜日</td>
-    </tr>
-    </table>
-  </div>
-  </div>
-    <ul>
-    <li><a href="#" target="_blank"><i class="bi bi-instagram"></i></a></li>
-    <li><a href="#" target="_blank"><i class="bi bi-twitter"></i></a></li>
-    <li><a href="#" target="_blank"><i class="bi bi-facebook"></i></a></li>
-    </ul>
-    <p>Copyright &copy; Macalon Cafe all rights reserved.</p>
-     </footer>
-  <!-- トップへ -->
-  <div class="go-to-top active" id="pagetop">
-    <i class="bi bi-arrow-up"></i>
-  </div>
+      
+    </section>
+  </main>
+  <footer>
+    <small>Copyright &copy All Rights Reserved.</small> 
+    <!-- フッター -->
+   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

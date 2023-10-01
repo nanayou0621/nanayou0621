@@ -1,0 +1,312 @@
+@charset 'utf-8';
+
+body{
+  margin: 0;
+  font-family: 'Sigmar One', cursive;
+  
+}
+/* ローディング画面 */
+#loading{
+  background-color: #fcf2f2ea;
+  position: fixed;
+  inset: 0; 
+  z-index: 10001;
+  display: grid;
+  place-items: center;
+}
+#loading-screen{
+  background-color:#D3FBAB; 
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  translate: 0 100vh;
+}
+
+
+#loading p{
+  font-size: 2rem;
+  font-family: var(--oswald-font);
+}
+/* ヘッダー */
+.header_menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:16px;
+  background: rgba(184, 230, 194,0.8);
+  z-index: 1;
+  
+}
+#logo{
+  cursor: pointer;
+}
+.pc-menu{
+  display: none;
+
+}
+/* ハンバーガーメニュー */
+.material-icon{
+  font-size: 40px;
+  color: pink;
+  cursor: pointer;
+}
+.hidden{
+  display: none;
+}
+
+#open{
+  position: relative;
+}
+#open.show{
+  display: none;
+}
+#close{
+  position:absolute;
+  top: 20px;
+  right: 18px;
+}
+.overlay{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  display: none;
+  background: rgba( 184,230,194, 0.8);
+  pointer-events: none;
+  transition:opacity .8s;
+  z-index: 2;
+ }
+.overlay.active{
+  display: block;
+  pointer-events: auto;
+  transition-delay: 5s;
+}
+.overlay ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.overlay ul a{
+  text-decoration: none;
+  color:  #fff;
+  -webkit-text-stroke: 1px #74ccac;
+  font-size: 30px;
+  cursor: pointer;
+}
+.overlay ul a:hover{
+  color: #D3FBAB;
+}
+
+
+/* ヒーロー部分 */
+.main-container{
+  max-width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.main-container ul{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  transition: transform .3s;
+}
+.main-container li{
+  list-style-type: none;
+  height: 100%;
+  min-width: 100%;
+}
+.main-container img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+
+/* コンセプト */
+
+.concept-container {
+  text-align: center;
+ 
+}
+.concept-container h2{
+  margin-top: 45px;
+  font-size: 36px;
+  color: #74ccac;
+}
+.concept-wrapper{
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.concept-menu .text{
+  margin-top: 0px;
+}
+.concept-menu h3{
+  text-align: left;
+    margin-top: 30px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    color: rgb(126, 199, 215);
+}
+.concept-menu img{
+  object-fit: cover;
+  width: 100%;
+  height: 290px;
+  border: 9px solid #74ccac;
+  border-radius: 35px;
+  box-sizing: border-box;padding: 5px;
+}
+.concept-menu img:hover{
+  opacity: 0.7;
+}
+/* メニュー */
+.menu-container h2{
+  text-align: center;
+  font-size: 36px;
+  color: #74ccac;
+}
+
+
+
+
+
+
+
+
+/* グッズ */
+#liner{
+  position: relative;
+  width: 100vw;
+  background: #eeeeee;
+  display: flex;
+  overflow: hidden;
+  
+}
+#liner ul {
+  padding: 0;
+  width: 100vw;
+  display: flex;
+  flex-shrink: 0;
+}
+#liner ul:first-child {
+  animation: move-around 60s -30s linear infinite;
+}
+
+#liner ul:last-child {
+  animation: move-around2 60s linear infinite;
+}
+#liner ul li{
+  display: inline-block;
+  width: 100%;
+  min-width: 150px;
+  margin-right: 20px;
+  list-style: none;
+  text-align: center;
+}
+#liner ul img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes move-around{
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes move-around2{
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+/* フッター */
+footer{
+  height: 100px;
+  text-align: center;
+  align-items: center;
+  background: #74ccac;
+}
+small{
+  line-height: 100px;
+}
+/***************** PCメニュー *********************/
+@media screen and (min-width: 768px){
+  .sp-menu{
+    display: none;
+  }
+  .pc-menu{
+    display: block;
+  }
+  .header_menu{
+    display: flex;
+  }
+  .header_menu ul{
+    display: flex;
+  }
+  .header_menu li{
+    list-style-type: none;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+  .header_menu li a{
+    color:  #fff;
+    -webkit-text-stroke: 1px #74ccac;
+    text-decoration: none;
+    
+  }
+  .header_menu li a:hover{
+    color:#D3FBAB;
+  }
+  .main-container{
+    text-align: center;
+    height: 450px;
+  }
+  .main-container img{
+    height: 450px;
+  }
+/* サブメニュー*/
+.sub-menu{
+  display: none;
+  margin-left: -40px;
+  position: absolute;
+  text-align: center;
+}
+.sub-menu a{
+  display: none;
+}
+  /* PC コンセプト */
+  .concept-wrapper{
+    display: flex;
+  }
+  .concept-menu.left{
+    flex: 1;
+  }
+  .concept-menu.middle{
+    flex: 1;
+  }
+  .concept-menu.right{
+    flex: 1;
+  }
+  .concept-menu {
+    width: max-content;
+    margin: 16px;
+  }
+  .concept-menu h3{
+    font-size: 16px;
+  }
+  .concept-menu .text{
+    margin-top: 30px;
+  }
+}

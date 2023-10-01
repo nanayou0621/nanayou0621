@@ -1,100 +1,91 @@
 'use strict';
-{
-const open = document.getElementById('open');
-const overlay = document.querySelector('.overlay');
-const close= document.getElementById('close');
+// ローディング画面
+const loadingAreaGrey = document.querySelector('#loading');
+const loadingAreaGreen = document.querySelector('#loading-screen');
+const londingText =document.querySelector('#loading p');
 
-open.addEventListener('click',() =>{
-  overlay.classList.add('show');
-  open.classList.add('hide');
-});
-close.addEventListener('click',() =>{
-  overlay.classList.remove('show');
-  open.classList.remove('hide');
-});
-
-//------ ページトップへ------
-const pagetop = document.getElementById("pagetop");
-
-// .pagetopをクリックしたら
-pagetop.addEventListener("click",()=>{
-// ページ上部へスムーズに移動
-    window.scroll({
-      top:0,
-      behavior:"smooth"
-  });
+window.addEventListener('load',()=> {
+  loadingAreaGrey.animate(
+    {
+    opacity:[1,0],
+    visibility:'hidden',
+  },
+  {
+    duration:2000,
+    delay:1200,
+    easing:'ease',
+    fill:'forwards',
+  }
+);
+  loadingAreaGreen.animate(
+    {
+      translate:['0 100vh','0 0','0 -100vh']
+    },
+  {
+    duration:2000,
+    delay:800,
+    easing:'ease',
+    fill:'forwards',
+  }
+);
+  loadingText.animate(
+    [
+      {
+        opadity:1,
+      },
+      {
+        opadity:0,
+      },
+    ],
+    {
+      duration:1200,
+      easing:'ease',
+      fill:'forwards',
+    }
+  );
 });
 // スライドショー
-{
-  const next = document.getElementById('next');
-  const prev = document.getElementById('prev');
-  const ul = document.querySelector('.top-image');
-  const slides = ul.children;
-  const dots = [];
-  let currentIndex = 0;
-
-  function updateButtons() {
-    prev.classList.remove('hidden');
-    next.classList.remove('hidden');
-
-    if (currentIndex === 0) {
-      prev.classList.add('hidden');
-    }
-    if (currentIndex === slides.length - 1) {
-      next.classList.add('hidden');
-    }
-  }
-  function moveSlides() {
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    ul.style.transform = `translateX(${-1 * slideWidth * currentIndex}px)`;
-
-  }
-  function setupDots() {
-    for (let i = 0; i < slides.length; i++) {
-      const button = document.createElement('button');
-      button.addEventListener('click' ,() =>{
-        currentIndex = i;
-        updateDots();
-        updateButtons();
-        moveSlides();
+$(function(){
+   $(document).ready(function(){
+        $(".slider").bxSlider();
       });
-      dots.push(button);
-      document.querySelector('.button-nav').appendChild(button);
-
-    }
-    dots[0].classList.add('current');
-  }
-
-  function updateDots(){
-    dots.forEach(dot =>{
-      dot.classList.remove('current');
     });
-    dots[currentIndex].classList.add('current');
-    
-  }
-  
+// ハンバーガーメニュー
+const open = document.getElementById('open');
+const overlay = document.querySelector('.overlay');
+const close = document.getElementById('close');
 
-  updateButtons();
-  setupDots();
-  next.addEventListener('click', () => {
-    currentIndex++;
-    updateButtons();
-    moveSlides();
-    updateDots();
 
+open.addEventListener('click', () => {
+  overlay.classList.add('active');
+  open.classList.add('show');
+});
+close.addEventListener('click', () => {
+  overlay.classList.remove('active');
+  open.classList.remove('show');
+});
+
+// サブメニュー
+$(function() {
+  $('.has-menu').mouseover(function() {
+      $('.sub-menu a', this).stop().slideDown('fast');
+  })
+  .mouseout(function() {
+      $('.sub-menu a', this).stop().slideUp('fast');
   });
-  prev.addEventListener('click', () => {
-    currentIndex--;
-    updateButtons();
-    moveSlides();
-    updateDots();
+});
 
-  });
-  window.addEventListener('resize',() =>{
-    moveSlides();
-  });
-}
 
-    }
-  
-
+// カルーセル
+const mySwiper = new Swiper ('.swiper', {
+  // 以下にオプションを設定
+  loop: true, //最後に達したら先頭に戻る
+  slidesPerView: '2', //何枚表示するか
+  speed: 2000, // スライドアニメーションのスピード（ミリ秒）
+  centeredSlides : true,
+  autoplay: { //自動再生する
+  delay: 4000, //次のスライドに切り替わるまでの時間
+  disableOnInteraction: false, //ユーザーが操作したら止めるか
+  waitForTransition: false, // アニメーションの間にスライドを止めるか
+  },
+});
