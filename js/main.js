@@ -75,17 +75,15 @@ $(function() {
   });
 });
 
+// 表示
+  $(function(){
+     $(".menu-img").on("inview",function(event, isInView){
 
-// カルーセル
-const mySwiper = new Swiper ('.swiper', {
-  // 以下にオプションを設定
-  loop: true, //最後に達したら先頭に戻る
-  slidesPerView: '2', //何枚表示するか
-  speed: 2000, // スライドアニメーションのスピード（ミリ秒）
-  centeredSlides : true,
-  autoplay: { //自動再生する
-  delay: 4000, //次のスライドに切り替わるまでの時間
-  disableOnInteraction: false, //ユーザーが操作したら止めるか
-  waitForTransition: false, // アニメーションの間にスライドを止めるか
-  },
-});
+  // 表示領域に入ったとき
+     if (isInView){
+     $(this).addClass('active');
+     }else{
+     $(this).removeClass('active');
+     }
+   });
+  });
